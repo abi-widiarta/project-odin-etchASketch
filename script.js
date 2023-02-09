@@ -67,6 +67,17 @@ const changeColorMode = (value) => {
   }
 };
 
+const changeTileColor = (tileElement) => {
+  let randomNum;
+  if (colorRainbow) {
+    randomNum = getRandomColorNum();
+    console.log(randomNum);
+    tileElement.style.backgroundColor = getRandomRainbowColor();
+  } else {
+    tileElement.style.backgroundColor = color;
+  }
+};
+
 const renderTilesCount = () => {
   board.style.gridTemplateColumns = `repeat(${tilesCount}, auto)`;
   for (let i = 1; i <= tilesCount * tilesCount; i++) {
@@ -82,18 +93,13 @@ const renderTilesCount = () => {
       event.preventDefault();
     });
 
+    tileElement.addEventListener("mousedown", () => {
+      changeTileColor(tileElement);
+    });
+
     tileElement.addEventListener("mouseenter", () => {
-      let randomNum;
       if (clicked) {
-        if (colorRainbow) {
-          randomNum = getRandomColorNum();
-          console.log(randomNum);
-          tileElement.style.backgroundColor = getRandomRainbowColor();
-          console.log(colorRainbow, "yes");
-        } else {
-          tileElement.style.backgroundColor = color;
-          console.log(colorRainbow);
-        }
+        changeTileColor(tileElement);
       }
     });
 
@@ -131,7 +137,6 @@ wrapper.addEventListener("drop", (event) => {
 
 colorPicker.addEventListener("input", () => {
   color = colorPicker.value;
-  console.log(color);
 });
 
 renderTilesCount();
