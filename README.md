@@ -12,5 +12,5 @@ Notes for this project :
 - Planning to make the result downloadable as image by using html2canvas library
 - UI design inspired from https://github.com/Silinde87/top-etch-a-sketch
 
-Link Demo : https://project-odin-etch-a-sketch.vercel.app/
+Demo link : https://project-odin-etch-a-sketch.vercel.app/
 
