@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SCRIPT -->
+    <script defer src="./script.js"></script>
+
+    <!-- CDN DRAGGABLE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <!-- LINK FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sketch-container">
+        <h1 class="sketch-title">Etch a Sketch</h1>
+        <div class="sketch-board"></div>
+        <div class="btn-wrapper">
+          <div class="btn-rounded-wrapper">
+            <div id="btn-rounded-size" class="btn-rounded btn-rounded-size">
+              <div class="marker marker-size"></div>
+            </div>
+            <div class="size-small"></div>
+            <div class="size-big"></div>
+          </div>
+          <a class="btn-clear" href="#">Clear</a>
+          <div class="btn-rounded-wrapper">
+            <div id="btn-rounded-color" class="btn-rounded btn-rounded-color">
+              <div class="marker marker-color"></div>
+            </div>
+            <div class="color-default">
+              <input id="color-input" type="color" />
+            </div>
+            <div class="color-rainbow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

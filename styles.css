@@ -1,0 +1,168 @@
+:root {
+  --backround: #fff2af;
+  --red: #c62d42;
+  --cream: #fff6d3;
+  --textYellow: #ffb370;
+  --brown: #c29b00;
+  font-family: "Lobster", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: var(--backround);
+}
+
+.sketch-container {
+  width: 600px;
+  height: 650px;
+  border-radius: 40px;
+  background-color: var(--red);
+  text-align: center;
+  padding: 20px 14px;
+}
+
+.sketch-title {
+  color: var(--textYellow);
+  letter-spacing: 2px;
+}
+
+.sketch-board {
+  display: grid;
+  width: 80%;
+  aspect-ratio: 1/1;
+  margin: 10px auto 0;
+  background-color: var(--cream);
+  /* grid-template-columns: repeat(10, 45.8px); */
+  border-radius: 10px;
+  overflow: hidden;
+  /* gap: 1px; */
+  /* grid-column: 10;
+  grid-row: 10; */
+}
+
+.tile {
+  aspect-ratio: 1/1;
+
+  /* border: 1px solid var(--brown); */
+  /* background-color: white; */
+}
+
+/* .tile:hover {
+  animation-name: hoverColor;
+  animation-duration: 200ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+} */
+
+.btn-wrapper {
+  display: flex;
+  margin: 24px 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-rounded-size {
+  justify-content: end;
+  align-items: center;
+}
+
+.btn-rounded-color {
+  justify-content: start;
+  align-items: center;
+}
+
+.btn-rounded-wrapper {
+  position: relative;
+}
+
+.btn-rounded {
+  background-color: #fff;
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+}
+
+.btn-clear {
+  text-decoration: none;
+  color: #000;
+  background-color: var(--cream);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.marker {
+  border-bottom: 10px solid #000;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.marker-size {
+  transform: rotate(90deg);
+  margin: 4px;
+}
+
+.marker-color {
+  transform: rotate(270deg);
+  margin: 4px;
+}
+
+.size-big {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+}
+
+.size-small {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  width: 10px;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+}
+
+.color-rainbow {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+}
+
+.color-default > input {
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 24px;
+
+  /* background-color: #000; */
+}
+
+@keyframes hoverColor {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #000;
+  }
+}
