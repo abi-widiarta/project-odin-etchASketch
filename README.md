@@ -3,7 +3,7 @@
 What I Learn :
 - Found a really cool draggable rotation knob on gsap
 - eventListener
-- disabling draggable div in the board, by using ondragstart,ondragend event listener end preventDefault
+- disabling draggable div in the board, by using ondragstart,ondragend event listener and preventDefault
 
 Notes for this project :
 - Not responsive yet
